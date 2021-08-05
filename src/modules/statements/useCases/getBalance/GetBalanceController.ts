@@ -14,6 +14,12 @@ export class GetBalanceController {
 
     const balanceDTO = BalanceMap.toDTO(balance);
 
+    // balanceDTO.statement.forEach((statement) => {
+    //   if (!statement.sender_id) {
+    //     delete statement.sender_id;
+    //   }
+    // });
+
     return response.json(balanceDTO);
   }
 }

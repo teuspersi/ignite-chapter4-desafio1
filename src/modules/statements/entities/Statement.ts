@@ -28,10 +28,10 @@ export class Statement {
   @JoinColumn({ name: "user_id" })
   user: User;
 
+  sender_id?: string;
+
   @Column("uuid")
   receiver_id?: string;
-
-  sender_id?: string;
 
   @ManyToOne(() => User, (user) => user.statement)
   @JoinColumn({ name: "receiver_id" })

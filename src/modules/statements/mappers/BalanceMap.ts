@@ -18,15 +18,28 @@ export class BalanceMap {
         type,
         created_at,
         updated_at,
-      }) => ({
-        id,
-        sender_id: user_id,
-        amount: Number(amount),
-        description,
-        type,
-        created_at,
-        updated_at,
-      })
+      }) => {
+        if (type === "transfer") {
+          return {
+            id,
+            sender_id: user_id,
+            amount: Number(amount),
+            description,
+            type,
+            created_at,
+            updated_at,
+          };
+        }
+
+        return {
+          id,
+          amount: Number(amount),
+          description,
+          type,
+          created_at,
+          updated_at,
+        };
+      }
     );
 
     return {

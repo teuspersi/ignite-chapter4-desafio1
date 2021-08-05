@@ -78,8 +78,6 @@ export class StatementsRepository implements IStatementsRepository {
       }
     }, 0);
 
-    console.log(statement);
-
     if (statement) {
       if (with_statement) {
         return {

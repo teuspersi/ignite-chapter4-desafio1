@@ -9,7 +9,7 @@ enum OperationType {
   TRANSFER = "transfer",
 }
 
-export class MakeTransferController {
+export class CreateTransferStatementController {
   async execute(request: Request, response: Response) {
     const { id: user_id } = request.user;
     const { receiver_id } = request.params;
